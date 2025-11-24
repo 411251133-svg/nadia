@@ -1,0 +1,176 @@
+@keyframes pulse-energy {
+  0%, 100% {
+    box-shadow: 0 0 30px 0 rgba(255, 193, 7, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 50px 15px rgba(255, 193, 7, 0.8);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-30px) rotate(10deg);
+  }
+  66% {
+    transform: translateY(-15px) rotate(-10deg);
+  }
+}
+
+@keyframes energy-pulse {
+  0%, 100% {
+    transform: scale(1);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    text-shadow: 0 0 40px rgba(255, 193, 7, 0.8);
+  }
+}
+
+@keyframes lightning {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    filter: brightness(1);
+  }
+  25% {
+    transform: scale(1.2) rotate(5deg);
+    filter: brightness(1.5);
+  }
+  50% {
+    transform: scale(1.1) rotate(-5deg);
+    filter: brightness(1.8);
+  }
+  75% {
+    transform: scale(1.3) rotate(3deg);
+    filter: brightness(1.3);
+  }
+}
+
+@keyframes fire {
+  0%, 100% {
+    transform: scale(1) translateY(0px);
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    transform: scale(1.1) translateY(-5px);
+    filter: hue-rotate(15deg);
+  }
+  50% {
+    transform: scale(1.2) translateY(-10px);
+    filter: hue-rotate(30deg);
+  }
+  75% {
+    transform: scale(1.15) translateY(-3px);
+    filter: hue-rotate(15deg);
+  }
+}
+
+@keyframes bounce-energetic {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  25% {
+    transform: translateY(-20px) scale(1.1);
+  }
+  50% {
+    transform: translateY(-30px) scale(1.2);
+  }
+  75% {
+    transform: translateY(-10px) scale(1.05);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes spin-fast {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-strong {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.3);
+    filter: brightness(1.8);
+  }
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.energy-card {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 193, 7, 0.3);
+  box-shadow: 
+    0 8px 32px 0 rgba(255, 193, 7, 0.2),
+    inset 0 2px 0 rgba(255, 255, 255, 0.2);
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse-energy {
+  animation: pulse-energy 2s infinite;
+}
+
+.animate-energy-pulse {
+  animation: energy-pulse 1.5s ease-in-out infinite;
+}
+
+.animate-lightning {
+  animation: lightning 1s ease-in-out infinite;
+}
+
+.animate-fire {
+  animation: fire 1.2s ease-in-out infinite;
+}
+
+.animate-bounce-energetic {
+  animation: bounce-energetic 2s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-spin-fast {
+  animation: spin-fast 3s linear infinite;
+}
+
+.animate-pulse-strong {
+  animation: pulse-strong 2s ease-in-out infinite;
+}
+
+.energy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 12px 40px 0 rgba(255, 193, 7, 0.3),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}

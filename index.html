@@ -61,9 +61,9 @@
 
         const getGreeting = () => {
           const hour = currentTime.getHours();
-          if (hour < 12) return 'Selamat Pagi';
-          if (hour < 17) return 'Selamat Siang';
-          if (hour < 19) return 'Selamat Sore';
+          if (hour < 10) return 'Selamat Pagi';
+          if (hour < 15) return 'Selamat Siang';
+          if (hour < 20) return 'Selamat Sore';
           return 'Selamat Malam';
         };
 
